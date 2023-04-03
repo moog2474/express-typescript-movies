@@ -6,15 +6,41 @@ const movieSchema = new mongoose_1.Schema({
     genres: { type: [String], required: true },
     runtime: { type: Number, requred: true },
     cast: { type: [String], required: true },
+    num_mflix_comments: Number,
+    poster: String,
     title: { type: String, required: true },
+    fullplot: String,
     countries: { type: [String], required: true },
     released: { type: String, required: true },
-    directors: { type: [String] },
-    type: { type: String },
+    directors: [String],
+    writers: [String],
+    awards: {
+        wins: Number,
+        nominations: Number,
+        text: String
+    },
+    lastupdated: String,
+    type: String,
     imdb: {
-        rating: { type: Number },
-        votes: { type: Number },
-        id: { type: Number }
+        rating: Number,
+        votes: Number,
+        id: Number
+    },
+    year: Number,
+    tomatoes: {
+        viewer: {
+            rating: Number,
+            numReviews: Number,
+            meter: Number
+        },
+        fresh: Number,
+        critic: {
+            rating: Number,
+            numReviews: Number,
+            meter: Number
+        },
+        rotten: Number,
+        lastUPdated: Date
     }
 });
 const Movie = (0, mongoose_1.model)("movies", movieSchema);

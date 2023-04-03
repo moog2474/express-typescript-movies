@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const movie_routes_1 = __importDefault(require("./routes/movie.routes"));
 dotenv_1.default.config();
 const uri = process.env.MONGO_DB_URI || "";
 mongoose_1.default.connect(uri)
@@ -16,6 +17,7 @@ const app = (0, express_1.default)();
 const port = process.env.PORT;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
+app.use("/api", movie_routes_1.default);
 app.get('/api', (req, res) => {
     res.send('Express + TypeScript Server');
 });
