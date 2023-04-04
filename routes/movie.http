@@ -1,2 +1,55 @@
 ###
 GET http://localhost:9000/api/movie
+
+
+###
+GET http://localhost:9000/api/movie/573a1390f29313caabcd4135
+
+
+
+###
+POST http://localhost:9000/api/movie
+Content-Type: application/json
+
+{
+    "plot": "moog",
+    "genres": "moog",
+    "runtime": 22,
+    "cast": ["moog", "maag"],
+    "num_mflix_comments": 23,
+    "poster": "axaxa",
+    "title": "nartuo",
+    "fullplot": "String",
+    "countries": "Mongolia",
+    "released": "2022-12-05",
+    "directors": "moog",
+    "writers": [""],
+    "awards": {
+        "wins": 2,
+        "nominations": 2,
+        "text": "xa"
+    },
+    "lastupdated": "xaxxxa",
+    "type": "xrwq",
+    "imdb": {
+        "rating": 5,
+        "votes": 5,
+        "id": 5
+    },
+    "year": 5,
+    "tomatoes": {
+        "viewer": {
+            "rating": 5,
+            "numReviews": 5,
+            "meter": 5
+        },
+        "fresh": 5,
+        "critic": {
+            "rating": 5,
+            "numReviews": 5,
+            "meter": 5
+        },
+        "rotten": 5,
+        "lastUPdated": ""
+    }
+}

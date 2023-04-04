@@ -24,6 +24,7 @@ const getOne = async (req: Request, res: Response) => {
 };
 
 const create = async (req: Request, res: Response): Promise<void> => {
+
     try {
         const movie = new Movie(req.body);
         const savedMovie = await movie.save();
